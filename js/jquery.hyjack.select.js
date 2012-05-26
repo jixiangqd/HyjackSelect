@@ -108,8 +108,8 @@
 
             // Default settings
             settings = jQuery.extend({
-                ddImage: 'arrow_down.png',
-                ddCancel: 'cancel.png',
+                ddImage: 'img/arrow_down.png',
+                ddCancel: 'img/cancel.png',
                 ddImageClass: 'hjsel_ddImage',
                 ddCancelClass: 'hjsel_ddCancel',
                 emptyMessage: 'No Items to Display',

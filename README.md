@@ -79,5 +79,5 @@
  
 
 
-*Download: https://code.google.com/p/hyjack/downloads/list*
+*More Examples: http://www.frontensemble.com/hyjack*
 

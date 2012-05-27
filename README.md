@@ -1,10 +1,7 @@
 ###Hyjack Select###
 Demo Available at [http://www.frontensemble.com/hyjack] 
-  
-  <br/>
-  return
-  return
-
+<br/>
+<br/>
 ### Summary ###
 *************************************************************************************
   
@@ -13,9 +10,8 @@ Demo Available at [http://www.frontensemble.com/hyjack]
   as combobox or dropdownlists).  Hyjack Select enchances the select by injecting a 
 
   "search like suggest" textbox which queries the page-loaded select option items.  
-  
-  
-
+<br/>
+<br/>
 ### Remarks ###
 *************************************************************************************
   
@@ -30,11 +26,10 @@ Demo Available at [http://www.frontensemble.com/hyjack]
   Any modification to display needs to be handled through CSS not hardcoded, sample
 
   CSS has been embedded in the plugin for reference.
-  
-  
-  
+<br/>
+<br/>
 ### Code Samples ###
-*************************************************************************************
+
   <script type='text/javascript'>
     
 

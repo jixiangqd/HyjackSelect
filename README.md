@@ -1,5 +1,7 @@
-##Hyjack Select##
+###Hyjack Select###
 Demo Available at [http://www.frontensemble.com/hyjack] 
+  
+  
   
   
 
@@ -32,7 +34,7 @@ Demo Available at [http://www.frontensemble.com/hyjack]
   
   
 ### Code Samples ###
- 
+*************************************************************************************
   <script type='text/javascript'>
     
 

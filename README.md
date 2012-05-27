@@ -4,8 +4,8 @@ Demo Available at [http://www.frontensemble.com/hyjack]
 
 
  
-  ### Summary ###
-  *************************************************************************************
+### Summary ###
+*************************************************************************************
   
   Hyjack Select was designed to replace traditional html select input controls (also known
 
@@ -17,8 +17,8 @@ Demo Available at [http://www.frontensemble.com/hyjack]
 
 
  
-  ### Remarks ###
-  *************************************************************************************
+### Remarks ###
+*************************************************************************************
   
   The target select control is hidden from the page and replaced by the new 
 
@@ -36,8 +36,8 @@ Demo Available at [http://www.frontensemble.com/hyjack]
 
 
  
-  ## Code Samples
-  
+### Code Samples ###
+<code>
  
   <script type='text/javascript'>
     
@@ -86,7 +86,7 @@ Demo Available at [http://www.frontensemble.com/hyjack]
 
   </script>
  
-
+</code>
 
 *Download: https://code.google.com/p/hyjack/downloads/list*
 

@@ -40,7 +40,7 @@ Demo Available at [http://www.frontensemble.com/hyjack]
  
   // Code Samples
 
-  // *************************************************************************************
+  '''javascript
   
   <script type='text/javascript'>
     
@@ -89,7 +89,7 @@ Demo Available at [http://www.frontensemble.com/hyjack]
 
   </script>
  
-}}}
+'''
 
 
 *Download: [https://code.google.com/p/hyjack/downloads/list]*

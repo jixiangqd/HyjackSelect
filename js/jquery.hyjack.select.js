@@ -29,9 +29,8 @@
 
 (function ($) {
 
-    var // Plugin Variables
-		index = 0,
-	    hyjackable = 'select';
+    var index = 0, 				//running count for each hyjacked select
+	    hyjackable = 'select';  // only hyjack select elements
 
 	// Generic Functions
 	$.hyjack_select = {

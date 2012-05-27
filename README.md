@@ -1,12 +1,12 @@
-===Hyjack Select v1.x===
+##Hyjack Select v1.x
 Demo Available at [http://www.frontensemble.com/hyjack] 
 
 
-{{{
- 
-  // Summary
 
-  // *************************************************************************************
+ 
+  ###Summary
+
+  *************************************************************************************
   
   Hyjack Select was designed to replace traditional html select input controls (also known
 
@@ -14,7 +14,7 @@ Demo Available at [http://www.frontensemble.com/hyjack]
 
   "search like suggest" textbox which queries the page-loaded select option items.  
  
-}}}
+
 
 {{{
  
@@ -36,11 +36,11 @@ Demo Available at [http://www.frontensemble.com/hyjack]
  
 }}}
 
-{{{
- 
-  // Code Samples
 
-  '''javascript
+ 
+  ## Code Samples
+  
+  <code>
   
   <script type='text/javascript'>
     
@@ -89,9 +89,8 @@ Demo Available at [http://www.frontensemble.com/hyjack]
 
   </script>
  
-'''
+</code>
 
 
 *Download: [https://code.google.com/p/hyjack/downloads/list]*
-<br/><br/>
-----
+

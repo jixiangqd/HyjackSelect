@@ -11,7 +11,9 @@
 
   as combobox or dropdownlists).  Hyjack Select enchances the select by injecting a 
 
-  "search like suggest" textbox which queries the page-loaded select option items.  
+  "search like suggest" textbox which queries the page-loaded select option items.
+
+  The end result is similar to the html5 "datalist" (http://updates.html5rocks.com/2012/04/datalist-landed-in-Chrome-Canary)
 <br/>
 <br/>
 ### Remarks ###

@@ -1,7 +1,7 @@
 ###Hyjack Select###
 **Demo Available @ http://www.frontensemble.com/hyjack** 
 <br/>
-**Questions comments improvements are all welcome!**
+**Questions, comments, improvements are all welcome!**
 <br/>
 <br/>
 ### Summary ###

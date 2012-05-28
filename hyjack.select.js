@@ -290,6 +290,7 @@
             // Build textbox and inject items
 			_txtbox(hj);
             _items($(value), hj);
+			_width(hj);
 			
 			hj.select // Inject hyjacked control
 			    .append(hj.txtbox)

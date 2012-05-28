@@ -1,34 +1,4 @@
-////////////////////////////////////////////////
-// jQuery on page load
-////////////////////////////////////////////////
-$(function () {
-	var wait = 3000;
-	$('.old').fadeTo('fast',.4);
 
-	// Hyjack Onload with all defaults
-	$('.hyjack').hyjack_select();				
-	$('#rs_select').hyjack_select({restrictSearch: true});
-	$('#filter_select').hyjack_select({filter: 'like'});
-
-	/* Multiple CLASS with customization      
-	$('.hyjack').hyjack_select({            // Defaults
-		ddImage: 'image/of/arrow.png',      // arrow_down.png         
-		ddCancel: 'image/of/cancel.png',    // cancel.png         
-		ddImageClass: 'class_of_arrow',     // hjsel_ddImage         
-		ddCancelClass: 'class_of_cancel',   // hjsel_ddCancel         
-		emptyMessage: 'No Items Message',   // No Items to Display         
-		restrictSearch: false/true,         // false         
-		offset: 12            // false     
-	}); 
-	*/
-	
-	
-	// Display Function to help explain whats going on
-	$(':input').change(function () {
-		$('.onchange', $(this).parent()).html('onChange event fired, value is now - ' + $(this).val()).show().delay(wait).fadeOut();
-	});
-
-});
 
 
 ////////////////////////////////////////////////

@@ -29,78 +29,9 @@
 
 (function ($) {
 
-    var index = 0, 				//running count for each hyjacked select
+    var index = 0, 				// running count for each hyjacked select
 	    hyjackable = 'select';  // only hyjack select elements
 
-	// Generic Functions
-	$.hyjack_select = {
-
-		// Update select
-		update: function (selector) {
-			if(!selector){ $.hyjack_select.update_all(); return; }
-			
-			$('.hjsel_container').each(function(){
-				if($(this).data('hyjack.container') === $(selector).data('hyjacked.index'))
-				{
-					$(this).hide();
-					return false; // break loop
-				}
-			});		
-			
-			$(selector)
-				.data('is.hyjacked',false)
-				.hyjack_select();
-		},
-				
-		// Update everything
-		update_all: function()
-		{
-			$('.hjsel_container').hide();
-			
-			$(':input').filter(hyjackable).each(function(){
-				if($(this).data('is.hyjacked'))
-				{
-					$(this)
-						.data('is.hyjacked',false)
-						.hyjack_select();
-				}
-			});
-		},
-		
-		// Remove Hyjack
-		dispose: function(selector){
-			if(!selector){ $.hyjack_select.dispose_All(); return; }
-			
-			$('.hjsel_container').each(function(){
-				if($(this).data('hyjack.container') === $(selector).data('hyjacked.index'))
-				{
-					$(this).hide();
-					return false; // break loop
-				}
-			});		
-			
-			$(selector)
-				.data('is.hyjacked',false)
-				.show();
-		},
-		
-		// Remove All Hyjack
-		dispose_All: function()
-		{
-			$('.hjsel_container').each(function(){
-				if($(this).data('hyjack.container'))
-				{
-					$(this).hide();
-				}
-			});
-			
-			$(':input').filter(hyjackable).each(function(){
-				$(this)
-					.data('is.hyjacked',false)
-					.show();
-			});
-		}
-	};
 
     // Hyjack Select
     $.fn.hyjack_select = function (settings) {
@@ -117,11 +48,6 @@
 			restrictSearch: false
 		}, settings);
 
-	
-		// Encode / Decode Harmful HTML
-		function _decode(value) { return $('<div/>').html(value).text(); }
-		function _encode(value) { return $('<div/>').text(value).html(); }
-		
 		
 		// Extend Contains based on filter types
 		function _contains() {
@@ -164,7 +90,7 @@
         function _dirSelect($dir, hj) {
 
 			if ($dir !== null) {
-				hj.txtbox.val(_decode($dir.text()));
+				hj.txtbox.val($dir.text());
 				hj.selector.val($dir.attr('val'));
 			}	
 			
@@ -195,7 +121,9 @@
 		// Avoid leaving textbox text empty
 		function _hide(hj) {
 			hj.options.hide();
-			if (hj.txtbox.val() === '') { hj.txtbox.val(_decode($('option:selected', hj.selector).text())); }
+			if (hj.txtbox.val() === '') { 
+				hj.txtbox.val($('option:selected', hj.selector).text()); 
+			}
 		}
 
 		// Handle Tab
@@ -227,7 +155,7 @@
             
             // Determine fate of textbox text
             if (settings.restrictSearch) { 
-				hj.txtbox.val(_decode($('option:selected', hj.selector).text())); 
+				hj.txtbox.val($('option:selected', hj.selector).text()); 
 			}
 			
 			
@@ -251,7 +179,7 @@
                 listitems.append(
 				    $('<li/>')
                         .attr('val', $(value).val())
-					    .append(_encode($(value).text()))
+					    .append($(value).text())
 					    .bind('mouseenter', function () {
 					        $('li', listitems).removeClass('hjsel_options_hover');
 					        $(this).addClass('hjsel_options_hover');
@@ -261,7 +189,7 @@
 					        $(this).addClass('hjsel_options_hover');
 					        hj.txtbox
                                 .focus()
-								.val(_decode($(value).text()));
+								.val($(value).text());
 
 					        hj.selector
                                 .val($(value).val())
@@ -355,7 +283,7 @@
                 .bind('click', function () { _clear(hj); })
 			    .bind('keydown', function (e) { _keydown(hj, e); })
 				.bind('keyup', function(e) { _keyup(hj, e); })
-                .val(_decode($('option:selected', hj.selector).text()));
+                .val($('option:selected', hj.selector).text());
         }		
 		
 		// Hyjack the Control
@@ -438,6 +366,78 @@
 	
 		
     };
+	
+	
+	
+	$.hyjack_select = {
+
+		// Update select
+		update: function (selector) {
+			if(!selector){ $.hyjack_select.update_all(); return; }
+			
+			$('.hjsel_container').each(function(){
+				if($(this).data('hyjack.container') === $(selector).data('hyjacked.index'))
+				{
+					$(this).hide();
+					return false; // break loop
+				}
+			});		
+			
+			$(selector)
+				.data('is.hyjacked',false)
+				.hyjack_select();
+		},
+				
+		// Update everything
+		update_all: function()
+		{
+			$('.hjsel_container').hide();
+			
+			$(':input').filter(hyjackable).each(function(){
+				if($(this).data('is.hyjacked'))
+				{
+					$(this)
+						.data('is.hyjacked',false)
+						.hyjack_select();
+				}
+			});
+		},
+		
+		// Remove Hyjack
+		dispose: function(selector){
+			if(!selector){ $.hyjack_select.dispose_All(); return; }
+			
+			$('.hjsel_container').each(function(){
+				if($(this).data('hyjack.container') === $(selector).data('hyjacked.index'))
+				{
+					$(this).hide();
+					return false; // break loop
+				}
+			});		
+			
+			$(selector)
+				.data('is.hyjacked',false)
+				.show();
+		},
+		
+		// Remove All Hyjack
+		dispose_All: function()
+		{
+			$('.hjsel_container').each(function(){
+				if($(this).data('hyjack.container'))
+				{
+					$(this).hide();
+				}
+			});
+			
+			$(':input').filter(hyjackable).each(function(){
+				$(this)
+					.data('is.hyjacked',false)
+					.show();
+			});
+		}
+	};	
+	
 })(jQuery);
 
 

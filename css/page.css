@@ -1,0 +1,92 @@
+body
+{
+	font: 83%/20px "Lucida Grande","Lucida Sans Unicode",'Ebrima', 'Calibri', Arial,Verdana,sans-serif;
+	margin: 30px;
+	background: #fafafa;
+}
+
+h1,h2,h3,h4,p{
+	padding: 0 0 8px 0;
+	margin: 0;
+}		
+		
+.container, .info, .bugs, .fixed{
+	padding: 30px;
+	border: solid 1px #e0e0e0;
+	margin: 10px 0 20px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.container
+{
+	background: #fff;
+}
+
+.container p
+{
+	border-bottom: solid 1px #e0e0e0;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+.info
+{
+	background: #f0f0f0;
+}
+
+.bugs
+{
+	background: #FFE4E1; 
+}
+
+.buttons
+{
+	margin: 20px 0 10px; 
+}
+
+.fixed
+{
+	background: #E0EEE0;
+}
+
+.nav
+{
+	position: absolute;
+	right: 30px;
+	top: 67px;
+}
+
+nav
+{
+	text-decordation: none;
+	display: block;
+}
+
+.nav li
+{
+	font-size: .9em;
+	border: solid 1px #ccc;
+	border-bottom: solid 1px #f0f0f0;
+	padding: 10px;
+	margin-left: 20px;
+	background: #f0f0f0;
+	border-radius: 3px 3px 0 0;
+	-moz-border-radius: 3px 3px 0 0;
+	-webkit-border-radius: 3px 3px 0 0;
+	float: right;
+	display: inline;
+}
+
+.done
+{
+	text-decoration: line-through;
+}
+
+.onchange
+{
+	display: none;
+	color: Green;
+	margin: 5px 0 0;
+}

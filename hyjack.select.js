@@ -29,8 +29,8 @@
 
 (function ($) {
 
-    var index = 0, 				// running count for each hyjacked select
-	    hyjackable = 'select';  // only hyjack select elements
+    var index = 0,				// running count for each hyjacked select
+		hyjackable = 'select';	// only hyjack select elements
 
 
     // Hyjack Select
@@ -38,14 +38,13 @@
      
 		// Default settings
 		settings = jQuery.extend({
-			ddImage: 'img/arrow_down.png',
-			ddCancel: 'img/cancel.png',
-			ddImageClass: 'hjsel_ddImage',
-			ddCancelClass: 'hjsel_ddCancel',
-			emptyMessage: 'No Items to Display',
-			offset: 15,
-			filter: 'like',
-			restrictSearch: false
+			ddImage: 		'img/arrow_down.png',
+			ddCancel: 		'img/cancel.png',
+			ddImageClass:	'hjsel_ddImage',
+			ddCancelClass:	'hjsel_ddCancel',
+			emptyMessage:	'No Items to Display',
+			filter: 		'like',
+			restrictSearch:	false
 		}, settings);
 
 		
@@ -157,18 +156,17 @@
             if (settings.restrictSearch) { 
 				hj.txtbox.val($('option:selected', hj.selector).text()); 
 			}
-			
-			
+
             _reset(hj);
         }
 
 
 		
 		// Calculate the width 
-		function _width(hj){	
-			hj.txtbox.width(hj.selector.width() - (hj.ddImage.attr('width') + hj.ddCancel.attr('width') + settings.offset));
-			hj.options.width(hj.selector.width());
-			hj.container.width(hj.selector.width());			
+		function _width(hj){
+			var w = hj.ddImage.outerWidth(true) + hj.ddCancel.outerWidth(true);		
+			hj.txtbox.width(hj.selector.outerWidth() - w);
+			hj.options.width(hj.selector.outerWidth(true));
 		}
 		
 		
@@ -292,7 +290,6 @@
             // Build textbox and inject items
 			_txtbox(hj);
             _items($(value), hj);
-			_width(hj);
 			
 			hj.select // Inject hyjacked control
 			    .append(hj.txtbox)
@@ -306,7 +303,7 @@
 			$(document) // Bind click functions
 				.bind('click', function (e) { _away(e, hj); });
 			
-			$(window)
+			$(window)  // Width Adjustment
 				.load(function(){ _width(hj); });
             
 			return hj.container;

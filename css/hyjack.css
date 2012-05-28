@@ -5,19 +5,21 @@ If you see areas of improvement please let us know!
 /////////////////////////// */ 
 .hjsel_select 
 {
+	display: inline-block;
 	border: solid 1px #e0e0e0;
 	border-top: solid 1px #abadb3;
 	background: #fff;
-	
+	padding: 0 5px 0 2px;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;	
 }
 
-.hjsel_txtbox 
+.hjsel_txtbox ,
+.hjsel_txtbox:focus
 {
+	outline: none;
 	border: solid 1px #fff;
-	margin-left: 2px;
 }
 
 .hjsel_options 
@@ -62,7 +64,7 @@ If you see areas of improvement please let us know!
 .hjsel_ddImage
 {
 	cursor: pointer;
-	margin-bottom: 2px;
+	margin: 0 0 2px 0;
 }
 
 .hjsel_ddCancel

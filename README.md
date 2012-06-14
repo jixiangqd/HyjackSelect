@@ -34,7 +34,7 @@
 <br/>
 ### Code Samples ###
 
-  <script>
+  <script type='text/javascript'>
     
 
     /// Single ID which assumes all default 
@@ -73,23 +73,23 @@ Often it becomes neccessary to update dropdowns or even disable or dispose of th
 
 The following is a sub-set of functional available.
 
-<script>
+	<script type='text/javascript'>
 
-    /// Update Functions
- 
-    $.hyjack_select.update('.selector');    // Update by Selector
- 
-    $.hyjack_select.update();               // Update All hyjacks
-
-
-    /// Dispose Functions
-
-    $.hyjack_select.dispose('.selector');   // Dispose by Selector
-
-    $.hyjack_select.dispose();              // Dispose All hyjacks
+		/// Update Functions
+	 
+		$.hyjack_select.update('.selector');    // Update by Selector
+	 
+		$.hyjack_select.update();               // Update All hyjacks
 
 
-  </script>
+		/// Dispose Functions
+
+		$.hyjack_select.dispose('.selector');   // Dispose by Selector
+
+		$.hyjack_select.dispose();              // Dispose All hyjacks
+
+
+	</script>
  
 
 

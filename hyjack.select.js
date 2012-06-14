@@ -166,7 +166,7 @@
 		function _width(hj){
 			var w = hj.ddImage.outerWidth(true) + hj.ddCancel.outerWidth(true);		
 			hj.txtbox.width(hj.selector.outerWidth() - w);
-			hj.options.width(hj.selector.outerWidth(true));
+			hj.options.width(hj.selector.outerWidth(true));						
 		}
 		
 		
@@ -290,7 +290,6 @@
             // Build textbox and inject items
 			_txtbox(hj);
             _items($(value), hj);
-			_width(hj);
 			
 			hj.select // Inject hyjacked control
 			    .append(hj.txtbox)

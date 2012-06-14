@@ -34,7 +34,7 @@
 <br/>
 ### Code Samples ###
 
-  <script type='text/javascript'>
+  <script>
     
 
     /// Single ID which assumes all default 
@@ -63,7 +63,17 @@
         restrictSearch: false/true          // false
 
     });
+	</script>
+	
+<br/>
+<br/>
+### Additional Functions ###
+*************************************************************************************	
+Often it becomes neccessary to update dropdowns or even disable or dispose of them.
 
+The following is a sub-set of functional available.
+
+<script>
 
     /// Update Functions
  

@@ -1,8 +1,8 @@
-###Hyjack Select###
-**Demo Available @ http://hyjack.frontensemble.coms** 
+###Hyjack Paging###
+**Demo Available @ http://hyjack.frontensemble.com** 
 <br/>
 **Questions, comments, improvements are all welcome!**
-<br/>
+<br/>		
 <br/>
 ### Summary ###
 *************************************************************************************
@@ -93,5 +93,5 @@ The following is a sub-set of functional available.
  
 
 
-*More Examples: http://www.frontensemble.com/hyjack*
+*More Examples: http://hyjack.frontensemble.com/*
 

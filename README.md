@@ -1,7 +1,6 @@
 ###Hyjack Select###
-**Demo Available @ http://frontensemble.com/hyjack/select** 
 <br/>
-**Questions, comments, improvements are all welcome!**
+**Might be fun to convert this to an angular directive**
 <br/>		
 <br/>
 ### Summary ###
@@ -93,5 +92,4 @@ The following is a sub-set of functional available.
  
 
 
-*More Examples: http://frontensemble.com/hyjack/select*
 

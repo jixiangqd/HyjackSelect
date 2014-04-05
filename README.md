@@ -1,6 +1,4 @@
 ###Hyjack Select###
-**Demo Available @ http://frontensemble.com/hyjack/select** 
-<br/>
 **Questions, comments, improvements are all welcome!**
 <br/>		
 <br/>

@@ -1,11 +1,5 @@
 ###Hyjack Select###
-<<<<<<< HEAD
-**Might be fun to convert this to an angular directive**
-		
-=======
 **Questions, comments, improvements are all welcome!**
-<br/>		
->>>>>>> hotfix
 <br/>
 ### Summary ###
 *************************************************************************************

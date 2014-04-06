@@ -1,7 +1,7 @@
 ###Hyjack Select###
 **Questions, comments, improvements are all welcome!**
 <br/>		
-<br/>
+
 ### Summary ###
 *************************************************************************************
   

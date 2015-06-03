@@ -30,8 +30,10 @@
 (function ($) {
 
     var index = 0,				// running count for each hyjacked select
-		hyjackable = 'select';	// only hyjack select elements
+		hyjackable = 'select'; // only hyjack select elements
 
+
+	var filter_text = null;	 // for fast jump out filter
 
     // Hyjack Select
     $.fn.hyjack_select = function (settings) {
@@ -256,8 +258,13 @@
                     break;
 					
                 default: // keyup
+                	var txtboxVal = hj.txtbox.val();
+                    if (txtboxVal==filter_text){
+                        return;
+                    }
+                    filter_text = txtboxVal;
                     $('li', hj.options).remove('.hjsel_noitems').removeClass('hjsel_options_hover').hide();
-                    $('li:hj_contains_' + settings.filter + '("' + hj.txtbox.val() + '")', hj.options).show();
+                    $('li:hj_contains_' + settings.filter + '("' + txtboxVal + '")', hj.options).show();
                     $('li', hj.options).each(function () { if ($(this).is(':hidden')) { i++; } j++; });
                     if (i === j) {
                         hj.options.append(
@@ -277,10 +284,15 @@
 	
         // Inject the textbox values and events
         function _txtbox(hj) {
+	        var interval = null;
             hj.txtbox
                 .bind('click', function () { _clear(hj); })
 			    .bind('keydown', function (e) { _keydown(hj, e); })
 				.bind('keyup', function(e) { _keyup(hj, e); })
+				.bind('focus',function(e){
+                    if(interval==null)interval = setInterval(function(){_keyup(hj,{keyCode:70});},100);
+                })
+                .bind('blur',function(e){clearInterval(interval);interval=null;})
                 .val($('option:selected', hj.selector).text());
         }		
 		
